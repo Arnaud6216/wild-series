@@ -25,8 +25,8 @@ const router = createBrowserRouter([
   },
   {
     path: "/programs", // The /programs path
-    element: < Programs />, // Renders the Programs component
-  }
+    element: <Programs />, // Renders the Programs component
+  },
 ]);
 
 /* ************************************************************************* */
