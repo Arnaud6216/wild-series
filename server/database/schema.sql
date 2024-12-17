@@ -13,12 +13,12 @@ create table item (
 
 create table program (
   id int unsigned primary key auto_increment not null,
-  title varchar(255) not null,
-  synopsis text not null,
-  poster varchar(255) not null,
-  country varchar(255) not null,
-  year int unsigned not null,
-  category_id int unsigned not null
+  title varchar(255),
+  synopsis text,
+  poster varchar(255),
+  country varchar(255),
+  year int unsigned,
+  category_id int unsigned
 );
 
 create table category (

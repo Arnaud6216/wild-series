@@ -11,22 +11,62 @@ import App from "./App";
 // Import additional components for new routes
 // Try creating these components in the "pages" folder
 
-import Programs from "./pages/Programs/Programs";
+import ProgramIndex from "./pages/Programs/ProgramIndex";
+import CategoryIndex from "./pages/Category/CategoryIndex";
+import ProgramEdit from "./pages/Programs/ProgramEdit";
+import ProgramNew from "./pages/Programs/ProgramNew";
+import CategoryNew from "./pages/Category/CategoryNew";
+import CategoryDetail from "./pages/Category/CategoryDetail";
+import CategoryEdit from "./pages/Category/CategoryEdit";
+import ProgramDetail from "./pages/Programs/ProgramDetail";
 // import Contact from "./pages/Contact";
 
 /* ************************************************************************* */
 
 // Create router configuration with routes
 // You can add more routes as you build out your app!
-const router = createBrowserRouter([
-  {
+const router = createBrowserRouter([{
     path: "/", // The root path
     element: <App />, // Renders the App component for the home page
-  },
-  {
-    path: "/programs", // The /programs path
-    element: <Programs />, // Renders the Programs component
-  },
+    children: [
+      {
+        path: "/categories",
+        element: <CategoryIndex />,
+      },
+      {
+        path: "/categories/new",
+        element: <CategoryNew />,
+      },
+      {
+        path: "/categories/:id",
+        element: <CategoryDetail />,
+      },
+      {
+        path: "/categories/:id/edit",
+        element: <CategoryEdit />,
+      },
+      {
+        path: "/programs", 
+        element: <ProgramIndex />, 
+      },
+      {
+        path: "/programs/new",
+        element: <ProgramNew />,
+      },
+      {
+        path: "/programs/:id",
+        element: <ProgramDetail />,
+      },
+      {
+        path: "/programs/:id/edit",
+        element: <ProgramEdit />,
+      },
+      {
+        path: "/categories", 
+        element: <CategoryIndex />, 
+      },
+    ],
+  }
 ]);
 
 /* ************************************************************************* */
