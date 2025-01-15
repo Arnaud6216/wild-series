@@ -19,7 +19,6 @@ const browse: RequestHandler = async (req, res, next) => {
 
 //*****************************************************
 const read: RequestHandler = async (req, res, next) => {
-
   try {
     // Fetch a specific program based on the provided ID
     const programId = Number(req.params.id);
@@ -58,7 +57,7 @@ const edit: RequestHandler = async (req, res, next) => {
     next(err);
   }
 };
-  
+
 //*****************************************************
 
 const add: RequestHandler = async (req, res, next) => {
